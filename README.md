@@ -1,8 +1,6 @@
 <h1>A Simple Nestjs CRUD API</h1>
 
-If you want to test it out, remember to initialise ".env" for database connection key and to install require dependencies.
-
-To test out API endpoints consider using a tool like Postman API.
+If you want to test it out, remember to initialise ".env" for database connection key and to install require dependencies.To test out API endpoints consider using a tool like Postman API.
 
 I used JWT Tokens for access Tokens, I don't implement Refresh Tokens right now because I don't think we require those in this CRUD API but it's very easy to implement will soon do that also.
 
