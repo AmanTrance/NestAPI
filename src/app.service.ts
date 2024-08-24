@@ -47,11 +47,14 @@ export class AppService {
       const user = await databaseManager.getRepository<Users>(Users).findOne({where: {
         username: details.username
       }});
-      const id = user.id;
-      const updatedUser = await databaseManager.getRepository<Users>(Users).save({
+      const id: number = user.id;
+      await databaseManager.getRepository<Users>(Users).save({
         ...user,
         ...field
-      })
+      });
+      const updatedUser = await databaseManager.getRepository<Users>(Users).findOne({where: {
+        id: id
+      }});
       return {
         result: true,
         accessToken: this.authService.generateAccessToken(updatedUser.username, updatedUser.password)

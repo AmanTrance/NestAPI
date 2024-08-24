@@ -7,7 +7,7 @@ export const databaseManager = new DataSource({
     port: 5432,
     username: "postgres",
     password: "Kansal@31",
-    database: "Nest",
+    database: "postgres",
     entities: [Users],
     synchronize: true
 })
